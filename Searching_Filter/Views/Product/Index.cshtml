@@ -1,0 +1,140 @@
+﻿@model Products
+
+<div class="row">
+    <div class="col-md-3 col-12">
+
+        <div class="sidebar" style="height:650px;">
+            <h3 class="text-center">Filters</h3>
+            <h5 class="p-2">Brands</h5>
+            <div class="brand-checkbox">
+                <label for="miCheckbox">Samsung</label>
+                <input type="checkbox" class="checkbox" id="samsungCheckbox" name="samsungModel.IsChecked" value="Samsung" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="redmiCheckbox">Redmi</label>
+                <input type="checkbox" class="checkbox" id="redmiCheckbox" name="redmiModel.IsChecked" value="Redmi" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="redmiCheckbox">Lg</label>
+                <input type="checkbox" class="checkbox" id="lgCheckbox" name="LgModel.IsChecked" value="Lg" />
+            </div>
+            <h5 class="p-2">Categories</h5>
+            <div class="brand-checkbox">
+                <label for="televisionCheckbox">Television</label>
+                <input type="checkbox" class="checkbox" id="televisionCheckbox" name="televisionCheckbox" value="Televison" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="laptopCheckbox">Laptop</label>
+                <input type="checkbox" class="checkbox" id="laptopCheckbox" name="laptopCheckbox" value="Laptop" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="phoneCheckbox">Phone</label>
+                <input type="checkbox" class="checkbox" id="phoneCheckbox" name="phoneCheckbox" value="Phone" />
+            </div>
+            <h5 class="p-2">Ram</h5>
+            <div class="brand-checkbox">
+                <label for="2gb">2 GB</label>
+                <input type="checkbox" class="checkbox" id="2gb" name="2gb" value="2" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="4gb">4 GB</label>
+                <input type="checkbox" class="checkbox" id="4gb" name="4gb" value="4" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="8gb">8 GB</label>
+                <input type="checkbox" class="checkbox" id="8gb" name="8gb" value="8" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="12gb">12 GB</label>
+                <input type="checkbox" class="checkbox" id="12gb" name="12gb" value="12" />
+            </div>
+            <h5 class="p-2">Storage</h5>
+            <div class="brand-checkbox">
+                <label for="8gb">8 GB</label>
+                <input type="checkbox" class="checkbox" id="8gb" name="8gb" value="8gb" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="16gb">16 GB</label>
+                <input type="checkbox" class="checkbox" id="16gb" name="16gb" value="16gb" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="32gb">32 GB</label>
+                <input type="checkbox" class="checkbox" id="32gb" name="32gb" value="32gb" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="64gb">64 GB</label>
+                <input type="checkbox" class="checkbox" id="64gb" name="64gb" value="64gb" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="128gb">128 GB</label>
+                <input type="checkbox" class="checkbox" id="128gb" name="128gb" value="128gb" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="256gb">256 GB</label>
+                <input type="checkbox" class="checkbox" id="256gb" name="256gb" value="256gb" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="512gb">512 GB</label>
+                <input type="checkbox" class="checkbox" id="512gb" name="512gb" value="512gb" />
+            </div>
+            <h5 class="p-2">Processor</h5>
+            <div class="brand-checkbox">
+                <label for="Sanpdragon">Sanpdragon</label>
+                <input type="checkbox" class="checkbox" id="Sanpdragon" name="Sanpdragon" value="snapdragon" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="intel I5">intel I5</label>
+                <input type="checkbox" class="checkbox" id="intel I5" name="intel I5" value="intel I5" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="intel I7">intel I7</label>
+                <input type="checkbox" class="checkbox" id="intel I7" name="intel I7" value="intel I7" />
+            </div>
+            <div class="brand-checkbox">
+                <label for="Patchwall">Patchwall</label>
+                <input type="checkbox" class="checkbox" id="Patchwall" name="Patchwall" value="patchwall" />
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-9 col-12">
+   
+        <div class="card shadow border-0 mt-3 pb-3">
+            <div class="card-header bg-secondary bg-gradient m-lg-1 py-3">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-white py-2">Products</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-5">
+                <div class="row">
+                    <div class="col-12 text-end pb-3">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <table id="tblDB" class="table table-hover table-bordered px-5" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Brand Name</th>
+                                <th>Category Name</th>
+                                <th>Ram</th>
+                                <th>Storage</th>
+                                <th>Processor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblData"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/Product.js"></script>
+}
